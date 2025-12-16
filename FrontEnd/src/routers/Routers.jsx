@@ -1,0 +1,29 @@
+import { createBrowserRouter, createRoutesFromElements, Route } from "react-router";
+import {HomeComponent,LoginComponent, Sidebar} from '../imports/Imports.js'
+import ParkingComponent from "../components/ParkingComponent.jsx";
+import BillingComponent from "../components/BillingComponent.jsx";
+import AccountComponent from "../components/AccountComponent.jsx";
+import NotificationComponent from "../components/NotificationComponent.jsx";
+
+
+const router = createBrowserRouter(
+    createRoutesFromElements(
+        // public routes
+        <>
+        <Route path="/" index element={<HomeComponent />} />
+        <Route path="/login" element={<LoginComponent />} />
+        {/* Protected Routes */}
+        <Route path="/userDashboard" element={<Sidebar />}>
+            <Route path="parking" element={<ParkingComponent/>}></Route>
+            <Route path="billing" element={<BillingComponent/>}></Route>
+            <Route path="notification" element={<NotificationComponent/>}></Route>
+            <Route path="account" element={<AccountComponent/>}></Route>
+            
+        </Route>
+        
+
+         </>
+    )
+)
+
+export default router
