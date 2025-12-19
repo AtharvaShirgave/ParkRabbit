@@ -96,47 +96,83 @@ Frontend never triggers notification logic.
 
 ---
 
-## 📦 Repository Structure (Mono-Repo)
 ParkRabbit/
-├── backend/                         # Spring Boot backend
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/com/parkrabbit/
-│   │   │   │   ├── controller/      # REST controllers (API layer)
-│   │   │   │   ├── service/         # Business logic
-│   │   │   │   ├── repository/      # JPA repositories (DB access)
-│   │   │   │   ├── model/            # JPA entities / domain models
-│   │   │   │   ├── dto/              # Data Transfer Objects
-│   │   │   │   └── ParkRabbitApp.java
-│   │   │   └── resources/
-│   │   │       ├── application.yml  # App configuration
-│   │   │       ├── application-dev.yml
-│   │   │       └── application-prod.yml
-│   │   └── test/                    # Unit & integration tests
-│   ├── pom.xml                      # Maven dependencies
-│   ├── Dockerfile                   # Backend container config
-│   └── README.md                    # Backend-specific docs
-│
-├── frontend/                        # React frontend
-│   ├── src/
-│   │   ├── components/              # Reusable UI components
-│   │   ├── pages/                   # Page-level components
-│   │   ├── hooks/                   # Custom React hooks
-│   │   ├── services/                # API calls
-│   │   ├── styles/                  # Global & component styles
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   ├── public/
-│   ├── package.json
-│   ├── vite.config.js
-│   ├── Dockerfile                   # Frontend container config
-│   └── README.md                    # Frontend-specific docs
-│
-├── .env                             # Environment variables (NOT committed)
-├── .gitignore
-├── docker-compose.yml               # Local dev orchestration
-└── README.md                        # Project overview
 
+├── backend/ # Spring Boot backend
+
+│ ├── src/
+
+│ │ ├── main/
+
+│ │ │ ├── java/com/parkrabbit/
+
+│ │ │ │ ├── controller/ # REST controllers (API layer)
+
+│ │ │ │ ├── service/ # Business logic
+
+│ │ │ │ ├── repository/ # JPA repositories (DB access)
+
+│ │ │ │ ├── model/ # JPA entities / domain models
+
+│ │ │ │ ├── dto/ # Data Transfer Objects
+
+│ │ │ │ └── ParkRabbitApp.java
+
+│ │ │ └── resources/
+
+│ │ │ ├── application.yml # App configuration
+
+│ │ │ ├── application-dev.yml
+
+│ │ │ └── application-prod.yml
+
+│ │ └── test/ # Unit & integration tests
+
+│ ├── pom.xml # Maven dependencies
+
+│ ├── Dockerfile # Backend container config
+
+│ └── README.md # Backend-specific docs
+
+│
+
+├── frontend/ # React frontend
+
+│ ├── src/
+
+│ │ ├── components/ # Reusable UI components
+
+│ │ ├── pages/ # Page-level components
+
+│ │ ├── hooks/ # Custom React hooks
+
+│ │ ├── services/ # API calls
+
+│ │ ├── styles/ # Global & component styles
+
+│ │ ├── App.jsx
+
+│ │ └── main.jsx
+
+│ ├── public/
+
+│ ├── package.json
+
+│ ├── vite.config.js
+
+│ ├── Dockerfile # Frontend container config
+
+│ └── README.md # Frontend-specific docs
+
+│
+
+├── .env # Environment variables (NOT committed)
+
+├── .gitignore
+
+├── docker-compose.yml # Local dev orchestration
+
+└── README.md # Project overview
 
 ---
 
