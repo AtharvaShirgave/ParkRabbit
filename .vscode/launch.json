@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "JwtKeyGenerator",
+            "request": "launch",
+            "mainClass": "com.parkrabbit.backend.config.JwtKeyGenerator",
+            "projectName": "backend"
+        },
+        {
+            "type": "java",
+            "name": "JwtKeyGenerator",
+            "request": "launch",
+            "mainClass": "JwtKeyGenerator",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-BackendApplication<backend>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.parkrabbit.backend.BackendApplication",
+            "projectName": "backend",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

@@ -5,7 +5,7 @@
     "latitude": 48.7756,
     "longitude": 9.1715,
     "hourlyRate": 2.00,
-    "totalSlots": 35
+    "totalSlots":  2
   },
   {
     "name": "Stadtmitte Parking",
@@ -13,7 +13,7 @@
     "latitude": 48.7784,
     "longitude": 9.1794,
     "hourlyRate": 3.00,
-    "totalSlots": 50
+    "totalSlots": 3
   },
   {
     "name": "HFT Stuttgart Parking",
@@ -21,7 +21,7 @@
     "latitude": 48.7819,
     "longitude": 9.1707,
     "hourlyRate": 1.50,
-    "totalSlots": 25
+    "totalSlots": 4
   },
   {
     "name": "Schlossplatz Parking",
@@ -29,7 +29,7 @@
     "latitude": 48.7785,
     "longitude": 9.1799,
     "hourlyRate": 2.50,
-    "totalSlots": 40
+    "totalSlots": 2
   },
   {
     "name": "Hauptbahnhof Parking",
@@ -37,7 +37,7 @@
     "latitude": 48.7830,
     "longitude": 9.1810,
     "hourlyRate": 3.50,
-    "totalSlots": 60
+    "totalSlots": 3
   },
   {
     "name": "Feuersee Parking",
@@ -45,7 +45,7 @@
     "latitude": 48.7718,
     "longitude": 9.1626,
     "hourlyRate": 2.20,
-    "totalSlots": 30
+    "totalSlots": 3
   },
   {
     "name": "Charlottenplatz Parking",
@@ -53,7 +53,7 @@
     "latitude": 48.7733,
     "longitude": 9.1845,
     "hourlyRate": 2.80,
-    "totalSlots": 45
+    "totalSlots": 3
   },
   {
     "name": "Universität Stuttgart Parking",
@@ -61,7 +61,7 @@
     "latitude": 48.7812,
     "longitude": 9.1722,
     "hourlyRate": 1.80,
-    "totalSlots": 40
+    "totalSlots": 4
   },
   {
     "name": "Marienplatz Parking",
@@ -69,7 +69,7 @@
     "latitude": 48.7638,
     "longitude": 9.1710,
     "hourlyRate": 2.40,
-    "totalSlots": 30
+    "totalSlots": 3
   },
   {
     "name": "Bohnenviertel Parking",
@@ -77,6 +77,6 @@
     "latitude": 48.7742,
     "longitude": 9.1871,
     "hourlyRate": 2.60,
-    "totalSlots": 20
+    "totalSlots": 2
   }
 ]
