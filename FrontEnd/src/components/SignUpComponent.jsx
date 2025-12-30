@@ -18,8 +18,8 @@ export default function SignUpComponent() {
   };
   const formConfig = {
     meta: {
-      title: "Complete Payment",
-      subtitle: "Confirm your parking reservation",
+      title: "Sign Up",
+      subtitle: "Register to ParkRabbit. Fast and Easy Parking",
     },
 
     fields: [

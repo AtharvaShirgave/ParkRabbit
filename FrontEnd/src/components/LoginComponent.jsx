@@ -15,8 +15,8 @@ export default function LoginComponent() {
 
   const formConfig = {
   meta: {
-    title: "Complete Payment",
-    subtitle: "Confirm your parking reservation",
+    title: "LogIn",
+    subtitle: "If you already have an account in ParkRabbit simple login to ParkRabbit",
   },
 
   fields: [
