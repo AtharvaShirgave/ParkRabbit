@@ -15,6 +15,7 @@ import com.parkrabbit.backend.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
@@ -39,5 +40,6 @@ public class AuthController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
         }
     }
+
 
 }

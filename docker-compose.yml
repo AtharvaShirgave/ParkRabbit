@@ -2,16 +2,6 @@ version: "3.8"
 
 services:
 
-  rabbitmq:
-    image: rabbitmq:3-management
-    container_name: rabbitmq
-    ports:
-      - "5672:5672"     # RabbitMQ protocol
-      - "15672:15672"   # RabbitMQ UI
-    environment:
-      RABBITMQ_DEFAULT_USER: guest
-      RABBITMQ_DEFAULT_PASS: guest
-
   postgres:
     image: postgres:15
     container_name: postgres
@@ -22,20 +12,31 @@ services:
     ports:
       - "5432:5432"
 
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
   backend:
     build: ./backend
+    container_name: backend
     ports:
       - "8080:8080"
     depends_on:
       - postgres
       - rabbitmq
     environment:
-      SPRING_RABBITMQ_HOST: rabbitmq
-      SPRING_RABBITMQ_PORT: 5672
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/parkingdb
       SPRING_DATASOURCE_USERNAME: admin
       SPRING_DATASOURCE_PASSWORD: admin
-
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_RABBITMQ_PORT: 5672
+      JWT_SECRET: 5648LnK8XErDG1AhW3VDLIu6I/h1Z3EI9OJl4SoUvbU=
 
   frontend:
     build: ./FrontEnd
