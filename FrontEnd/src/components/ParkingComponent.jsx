@@ -1,12 +1,13 @@
 import GenericCardComponent from "./GenericCardComponent";
 import parkingAnimation from "../assets/parkingAnimation.json";
 import parkingReserved from "../assets/parkingReserved.json";
-
+import { useNotifications } from "../notifications/useNotifications";
 import { parkingLots, reserveParkingSlot } from "../api/parkingLots.js";
 import { useState } from "react";
 import { formatTime } from "../services/dateTime.service.js";
 export default function ParkingComponent() {
   const [parking, setParking] = useState([]);
+  const { addNotification } = useNotifications();
   const [reservation, setReservation] = useState(null);
   const handleParkingLots = async () => {
     try {
@@ -21,6 +22,13 @@ export default function ParkingComponent() {
     try {
       const response = await reserveParkingSlot(parkingLotId);
       setReservation(response);
+      addNotification({
+        type: "success",
+        title: "Reservation Confirmed",
+        message: `Slot ${response.slotId} reserved until ${formatTime(
+          response.expiresAt
+        )}`,
+      });
     } catch (error) {
       console.log(error);
     }
@@ -33,7 +41,11 @@ export default function ParkingComponent() {
           <GenericCardComponent
             key={reservation.id}
             title={`${reservation.parkingLotAddress} Parking Lot ${reservation.parkingLotId}`}
-            description={`Parking Slot No. • ${reservation.slotId} Reserved at • ${formatTime(reservation.reservedAt)} Expires at • ${formatTime(reservation.expiresAt)} `}
+            description={`Parking Slot No. • ${
+              reservation.slotId
+            } Reserved at • ${formatTime(
+              reservation.reservedAt
+            )} Expires at • ${formatTime(reservation.expiresAt)} `}
             animationData={parkingReserved}
           />
         </div>
