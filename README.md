@@ -48,7 +48,7 @@ Make sure the following are installed on your system:
 
 ## 🧱 Step 0 — Clone the Repository
 ```text
-gut clone <remote repo https link>
+git clone <remote repo>
 ```
 ## ⚙️ Step 1 — Build the Backend JAR
 - Navigate to the backend directory and build the Spring Boot application.
