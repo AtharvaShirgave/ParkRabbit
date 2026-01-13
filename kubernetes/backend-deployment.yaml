@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: dev
+  labels:
+    app: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: parkrabbit-backend
+        image: atharvashirgave/parkrabbit-backend:1.0.0
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: jdbc:postgresql://postgres-service:5432/parkingdb
+        - name: SPRING_DATASOURCE_USERNAME
+          value: admin
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: admin
+        - name: SPRING_RABBITMQ_HOST
+          value: rabbitmq-service
+        - name: SPRING_RABBITMQ_PORT
+          value: "5672"
+        - name: JWT_SECRET
+          value: 5648LnK8XErDG1AhW3VDLIu6I/h1Z3EI9OJl4SoUvbU=
